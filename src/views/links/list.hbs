@@ -4,15 +4,24 @@
       <div class="col-md-3">
         <div class="card text-center">
           <div class="card-body">
-            <a href="#" target="_blank">
-              <h3 class="card-title text-uppercase">
-                {{name}}
-              </h3>
-            </a>
+            <h3
+              class="card-title text-uppercase text-info font-weight-bold text-sm"
+            >
+              {{name}}
+            </h3>
+            <p class="m-2">{{price}}</p>
             <p class="m-2">{{description}}</p>
             <p>{{timeago created_at}}</p>
-            <a href="/links/delete/{{id}}" class="btn btn-danger m-2">Delete Link</a>
-            <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit Link</a>
+            <div>
+              <div class="text-center">                
+                  <a
+                    href="/links/delete/{{id}}"
+                    class="btn btn-danger m-2"
+                  >Delete Link</a>
+                  <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit
+                    Link</a>                               
+              </div>
+            </div>
           </div>
         </div>
       </div>
