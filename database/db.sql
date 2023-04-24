@@ -1,0 +1,40 @@
+CREATE DATABASE productsdb;
+use productsdb;
+
+--USERS TABLE
+CREATE TABLE users(
+  id INT(11) NOT NULL,
+  username VARCHAR(16) NOT NULL,
+  password VARCHAR(60) NOT NULL,
+  fullname VARCHAR(100) NOT NULL
+);
+
+--ALTER TABLE
+ALTER TABLE users 
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE users
+  MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+
+describe users;
+
+
+CREATE TABLE product(
+  id INT NOT NULL,
+  name  VARCHAR(255) NOT NULL,
+  description VARCHAR(400) NOT NULL,
+  price DECIMAL(10,2),
+  user_id INT(11),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+--ALTER TABLE
+ALTER TABLE product 
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE product
+  MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+
+
+describe product;
