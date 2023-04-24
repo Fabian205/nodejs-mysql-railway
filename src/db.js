@@ -3,7 +3,7 @@ const config = require("./config.js")
 
 //const PORT = config.PORT;
 
-const DB_HOST = config.db_host;
+const DB_HOST = config.HOST;
 const DB_USER = config.DB_USER;
 const DB_PASSWORD = config.DB_PASSWORD;
 const DB_NAME = config.DB_NAME;
